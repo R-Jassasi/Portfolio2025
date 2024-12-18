@@ -12,184 +12,202 @@
 </head>
 
 <body>
-
-    <!-- Scroll Progress Bar -->
-    <div id="progress-container">
-        <div id="progress-bar"></div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
     </div>
 
+    <div id="pagecontent">
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">My Portfolio</div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li class="filter-dropdown">
-                <button>Filters</button>
-                <ul>
-                    <li><button onclick="filterGrid('all')">All</button></li>
-                    <li><button onclick="filterGrid('design')">Design</button></li>
-                    <li><button onclick="filterGrid('development')">Development</button></li>
-                    <li><button onclick="filterGrid('animation')">Animation</button></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-
-
-
-
-    <!-- Grid Layout -->
-    <div class="grid-container">
-        <div class="grid-item"  data-category="design" data-aos="flip-left">
-            <div class="clickable-grid"onclick="location.href='project1.html'" ></div>
-            <img src="https://via.placeholder.com/400" alt="Large Design Project">
-            <div class="overlay">
-                <div class="text">
-                    <h3>Design one </h3>
-                    <p class="filter-tag">Design</p>
-                    <button class="more-button" onclick="location.href='project1.html'">More</button>
-                    <p class="description">This is a description of the large design project.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-item" data-category="animation" data-aos="fade-up">
-            <img src="https://via.placeholder.com/400" alt="Large Design Project">
-            <div class="overlay">
-                <div class="text">
-                    <h3>Animation two</h3>
-                    <p class="filter-tag">Animation</p>
-                    <p class="description">This is a description of the large design project.</p>
-                    <button class="more-button" onclick="location.href=''">More</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-item tall" data-category="development" data-aos="fade-up">
-            <img src="https://via.placeholder.com/400x600" alt="Large Design Project">
-            <div class="overlay">
-                <div class="text">
-                    <h3>Tall development </h3>
-                    <p class="filter-tag">Development</p>
-                    <p class="description">This is a description of the large design project.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-item" data-category="design" data-aos="fade-up">
-            <img src="https://via.placeholder.com/400" alt="Large Design Project">
-            <div class="overlay">
-                <div class="text">
-                    <h3>design again lol </h3>
-                    <p class="filter-tag">Design</p>
-                    <p class="description">This is a description of the large design project.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-item tall" data-category="development" data-aos="fade-up">
-            <img src="https://via.placeholder.com/400x600" alt="Large Design Project">
-            <div class="overlay">
-                <div class="text">
-                    <h3>Tall development </h3>
-                    <p class="filter-tag">Development</p>
-                    <p class="description">This is a description of the large design project.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-item" data-category="animation" data-aos="fade-up">
-            <img src="https://via.placeholder.com/400" alt="Large Design Project">
-            <div class="overlay">
-                <div class="text">
-                    <h3>Animation two</h3>
-                    <p class="filter-tag">Animation</p>
-                    <p class="description">This is a description of the large design project.</p>
-                </div>
-            </div>
-        </div>
-        <div class="grid-item" onclick="location.href='project1.html'" data-category="design" data-aos="flip-left">
-            <img src="https://via.placeholder.com/400" alt="Large Design Project">
-            <div class="overlay">
-                <div class="text">
-                    <h3>Design one </h3>
-                    <p class="filter-tag">Design</p>
-                    <p class="description">This is a description of the large design project.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-item" data-category="animation" data-aos="fade-up">
-            <img src="https://via.placeholder.com/400" alt="Large Design Project">
-            <div class="overlay">
-                <div class="text">
-                    <h3>Animation two</h3>
-                    <p class="filter-tag">Animation</p>
-                    <p class="description">This is a description of the large design project.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-item tall" data-category="development" data-aos="fade-up">
-            <img src="https://via.placeholder.com/400x600" alt="Large Design Project">
-            <div class="overlay">
-                <div class="text">
-                    <h3>Tall development </h3>
-                    <p class="filter-tag">Development</p>
-                    <p class="description">This is a description of the large design project.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-item" data-category="design" data-aos="fade-up">
-            <img src="https://via.placeholder.com/400" alt="Large Design Project">
-            <div class="overlay">
-                <div class="text">
-                    <h3>design again lol </h3>
-                    <p class="filter-tag">Design</p>
-                    <p class="description">This is a description of the large design project.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-item tall" data-category="development" data-aos="fade-up">
-            <img src="https://via.placeholder.com/400x600" alt="Large Design Project">
-            <div class="overlay">
-                <div class="text">
-                    <h3>Tall development </h3>
-                    <p class="filter-tag">Development</p>
-                    <p class="description">This is a description of the large design project.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-item" data-category="animation" data-aos="fade-up">
-            <img src="https://via.placeholder.com/400" alt="Large Design Project">
-            <div class="overlay">
-                <div class="text">
-                    <h3>Animation two</h3>
-                    <p class="filter-tag">Animation</p>
-                    <p class="description">This is a description of the large design project.</p>
-                </div>
-            </div>
+        <!-- Scroll Progress Bar -->
+        <div id="progress-container">
+            <div id="progress-bar"></div>
         </div>
 
 
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">My Portfolio</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="filter-dropdown">
+                    <button>Filters</button>
+                    <ul>
+                        <li><button onclick="filterGrid('all')">All</button></li>
+                        <li><button onclick="filterGrid('design')">Design</button></li>
+                        <li><button onclick="filterGrid('development')">Development</button></li>
+                        <li><button onclick="filterGrid('animation')">Animation</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+
+
+        <!-- Grid Layout -->
+        <div class="grid-container">
+            <div class="grid-item" data-category="design" data-aos="flip-left">
+                <div class="clickable-grid" onclick="location.href='project1.html'"></div>
+                <img src="https://via.placeholder.com/400" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Design one </h3>
+                        <p class="filter-tag">Design</p>
+                        <button class="more-button" onclick="location.href='project1.html'">More</button>
+                        <p class="description">This is a description of the large design project.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item" data-category="animation" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://via.placeholder.com/400" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Animation two</h3>
+                        <p class="filter-tag">Animation</p>
+                        <p class="description">This is a description of the large design project.</p>
+                        <button class="more-button" onclick="location.href=''">More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item tall" data-category="development" data-aos="fade-up">
+                <img src="https://via.placeholder.com/400x600" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Tall development </h3>
+                        <p class="filter-tag">Development</p>
+                        <p class="description">This is a description of the large design project.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item" data-category="design" data-aos="fade-up">
+                <img src="https://via.placeholder.com/400" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>design again lol </h3>
+                        <p class="filter-tag">Design</p>
+                        <p class="description">This is a description of the large design project.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item tall" data-category="development" data-aos="fade-up">
+                <img src="https://via.placeholder.com/400x600" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Tall development </h3>
+                        <p class="filter-tag">Development</p>
+                        <p class="description">This is a description of the large design project.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item" data-category="animation" data-aos="fade-up">
+                <img src="https://via.placeholder.com/400" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Animation two</h3>
+                        <p class="filter-tag">Animation</p>
+                        <p class="description">This is a description of the large design project.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" onclick="location.href='project1.html'" data-category="design" data-aos="flip-left">
+                <img src="https://via.placeholder.com/400" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Design one </h3>
+                        <p class="filter-tag">Design</p>
+                        <p class="description">This is a description of the large design project.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item" data-category="animation" data-aos="fade-up">
+                <img src="https://via.placeholder.com/400" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Animation two</h3>
+                        <p class="filter-tag">Animation</p>
+                        <p class="description">This is a description of the large design project.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item tall" data-category="development" data-aos="fade-up">
+                <img src="https://via.placeholder.com/400x600" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Tall development </h3>
+                        <p class="filter-tag">Development</p>
+                        <p class="description">This is a description of the large design project.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item" data-category="design" data-aos="fade-up">
+                <img src="https://via.placeholder.com/400" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>design again lol </h3>
+                        <p class="filter-tag">Design</p>
+                        <p class="description">This is a description of the large design project.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item tall" data-category="development" data-aos="fade-up">
+                <img src="https://via.placeholder.com/400x600" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Tall development </h3>
+                        <p class="filter-tag">Development</p>
+                        <p class="description">This is a description of the large design project.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item" data-category="animation" data-aos="fade-up">
+                <img src="https://via.placeholder.com/400" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Animation two</h3>
+                        <p class="filter-tag">Animation</p>
+                        <p class="description">This is a description of the large design project.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <footer>
+            <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="#63E6BE"
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="#63E6BE"
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="#63E6BE"
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+            </svg>
+
+        </footer>
 
     </div>
-
-    <footer>
-        <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#63E6BE" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#63E6BE" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#63E6BE" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-
-    </footer>
-
-
     <!-- AOS Library Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="index.js"></script>

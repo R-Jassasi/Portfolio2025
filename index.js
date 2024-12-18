@@ -29,3 +29,36 @@ function filterGrid(category) {
     });
 }
 
+
+//preloader for every new session
+document.addEventListener("DOMContentLoaded", () => {
+    // Check if the user has visited the site during this session
+    const hasVisited = sessionStorage.getItem("visited");
+
+    const preloader = document.getElementById("preloader");
+    const pagecontent = document.getElementById("pagecontent");
+
+    if (!hasVisited) {
+        // Show preloader and hide page content
+        setTimeout(() => {
+            preloader.style.display = "none"; // Hide preloader
+            pagecontent.style.display = "block"; // Show main content
+            
+            // Reinitialize AOS after showing content
+            AOS.refresh();
+        }, 2000); // 3 seconds delay
+
+        // Set the "visited" flag in sessionStorage
+        sessionStorage.setItem("visited", "true");
+    } else {
+        // Skip preloader and show content directly
+        preloader.style.display = "none";
+        pagecontent.style.display = "block";
+        
+        // Initialize AOS directly when skipping preloader
+        AOS.refresh();
+    }
+});
+
+
+
