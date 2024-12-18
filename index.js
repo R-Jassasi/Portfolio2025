@@ -29,9 +29,3 @@ function filterGrid(category) {
     });
 }
 
-// Initialize Lenis 
-const lenis = new Lenis({
-    lerp: 0.1, // Adjust this value for smoother scrolling 
-    smoothWheel: true, smoothTouch: false, smoothFrequency: 1.2, duration: 1.2, smoothInputs: true, touchMultiplier: 2,
-}); // Use requestAnimationFrame to continuously update the scroll 
-function raf(time) { lenis.raf(time); requestAnimationFrame(raf); } requestAnimationFrame(raf); 
