@@ -135,7 +135,6 @@
      padding: 0;
      margin: 1rem;
      min-height: 400px;
-     cursor: pointer;
  }
 
  .grid-item:hover {
@@ -158,6 +157,7 @@
      align-items: center;
      justify-content: center;
      text-align: center;
+     z-index: 1;
  }
 
  .grid-item:hover .overlay {
@@ -170,6 +170,7 @@
      padding: 1rem;
      visibility: visible;
      /* Ensure visibility */
+     z-index: 2;
  }
 
  .text h3,
@@ -194,6 +195,20 @@
      font-size: 0.9rem;
  }
 
+ .clickable-grid {
+     cursor: pointer;
+     background-color: rgba(255, 255, 255, 0);
+     /* Transparent color */
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: 3;
+     /* Ensure clickable-grid is below text and overlay */
+     cursor: pointer;
+ }
+
  .text .more-button {
      background-color: #FF5722;
      color: #fff;
@@ -210,9 +225,11 @@
 
  /* Hide the more button on desktop */
  @media (min-width: 1024px) {
-    .text .more-button {
+     .text .more-button {
          display: none;
      }
+
+
  }
 
  /* Remove existing styles */
@@ -307,6 +324,10 @@
          /* This will make the item span across 2 columns */
          grid-row: span 1;
          /* This will make the item span across 2 rows */
+     }
+
+     .clickable-grid {
+         display: none;
      }
  }
 
