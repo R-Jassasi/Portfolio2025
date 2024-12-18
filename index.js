@@ -29,23 +29,9 @@ function filterGrid(category) {
     });
 }
 
-//Lenis smooth scroll
-// Initialize Lenis
+// Initialize Lenis 
 const lenis = new Lenis({
-    lerp: 0.5,
-    wheelMultiplier: 0.5,
-    autoRaf: true,
-  });
-  
-  // Listen for the scroll event and log the event data
-  lenis.on('scroll', (e) => {
-    console.log(e);
-  });
-
-// Use requestAnimationFrame to continuously update the scroll
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
+    lerp: 0.1, // Adjust this value for smoother scrolling 
+    smoothWheel: true, smoothTouch: false, smoothFrequency: 1.2, duration: 1.2, smoothInputs: true, touchMultiplier: 2,
+}); // Use requestAnimationFrame to continuously update the scroll 
+function raf(time) { lenis.raf(time); requestAnimationFrame(raf); } requestAnimationFrame(raf); 
