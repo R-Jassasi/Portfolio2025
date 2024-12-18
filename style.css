@@ -194,7 +194,22 @@
      font-size: 0.9rem;
  }
 
+ .text .more-button {
+     background-color: #FF5722;
+     color: #fff;
+     border: none;
+     padding: 0.5rem 1rem;
+     cursor: pointer;
+     border-radius: 4px;
+     margin-top: 0.5rem;
+ }
 
+ .text .more-button:hover {
+     background-color: #FF3D00;
+ }
+
+/* Hide the more button on desktop */ 
+@media (min-width: 1024px) { .more-button { display: none;}}
  /* Remove existing styles */
  .grid-item img {
      width: 100%;
