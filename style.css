@@ -385,12 +385,19 @@
      .filter-dropdown {
          margin-left: 0;
          /* change left margin for filter button */
+
      }
 
      .filter-dropdown button{
         font-size: 1.2rem;
+        background-color: var(--secondary-color);
 
      }
+
+     .filter-dropdown ul {
+        left: -50px;
+        width: fit-content;
+    }
 
      /*grid layout*/
      .grid-item.large {
