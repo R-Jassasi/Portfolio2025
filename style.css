@@ -1,4 +1,62 @@
- /* General Reset */
+/* Import the fonts */
+@font-face {
+    font-family: 'Berlin Sans FB';
+    src: url('./Assets/fonts/berlinsansfb.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Berlin Sans FB Bold';
+    src: url('./Assets/fonts/berlinsansfbdemi.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  /* Define colors and fonts */
+  :root {
+    --primary-color: #6e44ff;
+    --secondary-color: #ff8600;
+    --tertiary-color: #030854;
+    --accent-color: #ffd8e6;
+  
+    --font-primary: 'Berlin Sans FB', sans-serif;
+    --font-bold: 'Berlin Sans FB Bold', sans-serif;
+  }
+  
+  /* Apply the styles */
+  body {
+    font-family: var(--font-primary);
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+  }
+  
+  h1 {
+    font-family: var(--font-bold);
+    color: var(--secondary-color);
+  }
+  
+  button {
+    background-color: var(--secondary-color);
+    width: 6rem;
+    height: 3rem;
+    color: var(--tertiary-color);
+    font-family: var(--font-bold);
+    font-size: x-large;
+    margin: 50px;
+  }
+  
+  button:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+  }
+
+  button:active{
+    background-color: #3d20a5;
+  }
+
+
+/* General Reset */
  * {
      margin: 0;
      padding: 0;
@@ -10,13 +68,8 @@
  }
 
 
- body {
-     font-family: Arial, sans-serif;
-     background-color: #151515;
- }
-
  h1,h2,h3,h4,h5,h6,p,img{
-    padding: 16px;
+    padding: 3px;
  }
 
  footer{
@@ -32,8 +85,8 @@
      justify-content: space-between;
      /* Aligns logo to the left and menu to the right on desktop */
      align-items: center;
-     background-color: #FF5722;
-     color: #fff;
+     background-color: var(--primary-color);
+     color:var(--secondary-color);
      padding: 1rem 2rem;
      position: sticky;
      top: 0;
@@ -60,14 +113,15 @@
  }
 
  nav ul li a {
-     color: #fff;
+     color: var(--secondary-color);
+     font-family: var(--font-bold);
      text-decoration: none;
-     font-size: 1.1rem;
+     font-size: 2.5rem;
      transition: color 0.3s ease;
  }
 
  nav ul li a:hover {
-     color: #FFEB3B;
+     color: var(--tertiary-color);
  }
 
  /* Filter Dropdown */
@@ -308,8 +362,9 @@
          /* Space between logo and menu */
      }
 
-     nav ul li {
-         margin-left: 1rem;
+     nav ul li a{
+        font-size: 1.2rem;
+         margin-left: 0rem;
          margin-bottom: 0.5rem;
          /* Add space between items */
      }
@@ -402,7 +457,7 @@
 }
 
 .sidebar {
-    background-color: rgb(225, 177, 177);
+    background-color: var(--tertiary-color);
     width: 30%;
     height: 100vh;
     min-height: 200px;
@@ -411,11 +466,41 @@
     position: sticky;
     top: 0.5%;
     text-align: center;
+    color: var(--accent-color);
+    padding: 15px;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    flex-direction: column; /* Aligns children vertically */
 
 }
 
+.sidebar .title {
+    color: var(--accent-color) !important;
+    font-family: var(--font-bold);
+    padding: 30px;
+}
+.sidebar .body{
+    color: var(--accent-color);
+    font-family: var(--font-primary);
+    padding-top: 30px !important; 
+    width: 70%;
+}
+
+.sidebar .tags{
+    color: var(--secondary-color) !important;
+    font-family: var(--font-bold);
+}
+
+.sidebar .year{
+    color: var(--secondary-color);
+    font-family: var(--font-primary);
+}
+
+
+
 .main {
-    background-color: rgb(178, 228, 127);
+    background-color: white;
     width: 70%;
     height: 100%;
     min-height: 1000px;
@@ -424,14 +509,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-
-}
-
-.main,
-.sidebar {
-    color: rgb(0, 0, 0);
     padding: 15px;
+
 }
+
+
 
 
 /* Styles for tablet and phone view (max-width: 768px) */
@@ -497,3 +579,37 @@
     }
 }
 
+
+
+/* Scroll-to-top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the page */
+    right: 20px; /* Distance from the right side of the page */
+    font-size: 30px;
+    background-color: var(--secondary-color); /* Your accent color */
+    color: var(--tertiary-color);
+    border-radius: 50%;
+    width: 50px; /* Size of the button */
+    height: 50px; /* Size of the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 5px 3px rgba(28, 5, 176, 0.7);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    z-index: 1000; /* Make sure it appears above all other elements */
+
+}
+
+.scroll-to-top:hover {
+    opacity: 1;
+    box-shadow: 0 8px 3px rgba(28, 5, 176, 0.7);
+
+}
+
+/* Scroll animation */
+html {
+    scroll-behavior: smooth;
+}

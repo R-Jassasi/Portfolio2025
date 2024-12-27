@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             preloader.style.display = "none"; // Hide preloader
             pagecontent.style.display = "block"; // Show main content
-            
+
             // Reinitialize AOS after showing content
             AOS.refresh();
         }, 2000); // 3 seconds delay
@@ -54,11 +54,30 @@ document.addEventListener("DOMContentLoaded", () => {
         // Skip preloader and show content directly
         preloader.style.display = "none";
         pagecontent.style.display = "block";
-        
+
         // Initialize AOS directly when skipping preloader
         AOS.refresh();
     }
 });
 
+
+//scroll top arrow
+    // Get the scroll-to-top button
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+    // Function to check scroll position and toggle button visibility
+    function toggleScrollToTopButton() {
+        if (window.scrollY > 200) { // If scrolled down 200px or more
+            scrollToTopBtn.style.display = 'flex'; // Show the button
+        } else {
+            scrollToTopBtn.style.display = 'none'; // Hide the button
+        }
+    }
+
+    // Check on page load
+    toggleScrollToTopButton();
+
+    // Check on scroll
+    window.addEventListener('scroll', toggleScrollToTopButton);
 
 
