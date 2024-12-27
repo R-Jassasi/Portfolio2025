@@ -539,6 +539,18 @@
 }
 
 
+/* Gallery Styles for Desktop and Larger Screens */
+.main .gallery {
+    display: grid; /* Added: Use grid layout for gallery */
+    grid-template-columns: repeat(3, 1fr); /* Added: 3 images per row on large screens */
+    gap: 20px; /* Added: Space between images */
+    width: 100%;
+}
+
+.main .gallery img {
+    width: 100%; /* Added: Ensure images take full width of their container */
+    height: auto;
+}
 
 
 /* Styles for tablet and phone view (max-width: 768px) */
@@ -556,6 +568,11 @@
     .main {
         width: 100%; /* Full width */
         height: auto; /* Adjust height to fit content */
+    }
+     /* Gallery Styles for Mobile */
+     .main .gallery {
+        grid-template-columns: 1fr; /* Added: 1 image per row on mobile */
+        gap: 15px; /* Added: Space between images */
     }
 }
 
