@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Filter Functionality
+// Filter Functionality
 function filterGrid(category) {
     const items = document.querySelectorAll('.grid-item');
     items.forEach(item => {
@@ -27,7 +28,26 @@ function filterGrid(category) {
             item.style.display = 'none';
         }
     });
+
+    // Close dropdown after selection
+    const dropdown = document.querySelector('.filter-dropdown ul');
+    dropdown.style.display = 'none';
 }
+
+// Show the dropdown when clicking the button
+document.querySelector('.filter-dropdown button').addEventListener('click', function() {
+    const dropdown = document.querySelector('.filter-dropdown ul');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+});
+
+// Close dropdown if user clicks outside of it (optional)
+document.addEventListener('click', function(event) {
+    const dropdown = document.querySelector('.filter-dropdown ul');
+    const button = document.querySelector('.filter-dropdown button');
+    if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.style.display = 'none';
+    }
+});
 
 
 //preloader for every new session
