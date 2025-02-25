@@ -7,39 +7,39 @@
     src: url('./Assets/fonts/berlinsansfb.ttf') format('truetype');
     font-weight: lighter;
     font-style: normal;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: 'Berlin Sans FB Bold';
     src: url('./Assets/fonts/berlinsansfbdemi.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
-  }
-  
-  /* Define colors and fonts */
-  :root {
+}
+
+/* Define colors and fonts */
+:root {
     --primary-color: #6e44ff;
     --secondary-color: #ff8600;
     --tertiary-color: #030854;
     --accent-color: #ffd8e6;
-  
+
     --font-primary: 'Berlin Sans FB', sans-serif;
     --font-bold: 'Berlin Sans FB Bold', sans-serif;
-  }
-  
-  /* Apply the styles */
-  body {
+}
+
+/* Apply the styles */
+body {
     font-family: var(--font-primary);
     background-color: var(--tertiary-color);
     color: var(--primary-color);
-  }
-  
-  h1 {
+}
+
+h1 {
     font-family: var(--font-bold);
     color: var(--secondary-color);
-  }
-  
-  button {
+}
+
+button {
     background-color: var(--secondary-color);
     width: 6rem;
     height: 3rem;
@@ -47,435 +47,457 @@
     font-family: var(--font-bold);
     font-size: x-large;
     margin: 5px;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: var(--primary-color);
     color: var(--accent-color);
-  }
+}
 
-  button:active{
+button:active {
     background-color: #3d20a5;
-  }
+}
 
 
 /* General Reset */
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- html {
-     scroll-behavior: smooth;
- }
+html {
+    scroll-behavior: smooth;
+}
+
+hr {
+
+    width: 100%;
+    height: 2px;
+    border: none;
+    margin: 1rem 0;
+    border-top: 3px solid var(--tertiary-color); 
+}
 
 
- h1,h2,h3,h4,h5,h6,p,img{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img {
     padding: 3px;
- }
+}
 
- p, a{
+p,
+a {
     font-family: var(--font-primary);
     font-size: 1.2rem;
     line-height: 20px;
- }
+}
 
- footer{
+footer {
     background-color: #e6ff04;
     height: 10vh;
     text-align: center;
     padding: 16px;
- }
+}
 
- /* Navigation */
- nav {
-     display: flex;
-     justify-content: space-between;
-     /* Aligns logo to the left and menu to the right on desktop */
-     align-items: center;
-     background-color: var(--primary-color);
-     color:var(--secondary-color);
-     padding: 1rem 2rem;
-     position: sticky;
-     top: 0;
-     z-index: 1000;
-     
- }
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* Aligns logo to the left and menu to the right on desktop */
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
- .logo {
-     font-size: 1.5rem;
-     font-weight: bold;
-     margin-bottom: 1rem;
- }
+}
 
- nav ul {
-     list-style: none;
-     display: flex;
-     justify-content: flex-end;
-     width: 100%;
- }
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
 
- nav ul li {
-     margin-left: 1.5rem;
-     display: flex;
-     align-items: center;
- }
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
 
- nav ul li a {
-     color: var(--secondary-color);
-     font-family: var(--font-bold);
-     text-decoration: none;
-     font-size: 2.5rem;
-     transition: color 0.3s ease;
- }
+nav ul li {
+    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+}
 
- nav ul li a:hover {
-     color: var(--tertiary-color);
- }
+nav ul li a {
+    color: var(--secondary-color);
+    font-family: var(--font-bold);
+    text-decoration: none;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+}
 
- /* Filter Dropdown */
- .filter-dropdown {
-     position: relative;
- }
+nav ul li a:hover {
+    color: var(--tertiary-color);
+}
 
- .filter-dropdown button {
-     background-color: var(--secondary-color);
-     color: var(--primary-color);
-     padding: 0.5rem 1rem;
-     cursor: pointer;
-     font-size: 2.5rem;
-     display: flex;
-     align-items: center;
-     margin-left: 1rem; /* Adjust spacing from the previous nav item */
-     width: fit-content;
+/* Filter Dropdown */
+.filter-dropdown {
+    position: relative;
+}
 
- }
+.filter-dropdown button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    /* Adjust spacing from the previous nav item */
+    width: fit-content;
 
- .filter-dropdown button:hover {
-     background-color: #FF5722;
-     color: #fff;
- }
+}
 
- .filter-dropdown ul {
-     position: absolute;
-     top: 100%;
-     left: 0;
-     background-color: #fff;
-     border: 1px solid #ddd;
-     list-style: none;
-     padding: 0 !important; /* Removed extra padding */
-     margin: 0 !important;  /* Reset margin */
-     display: none;
-     z-index: 1000;
+.filter-dropdown button:hover {
+    background-color: #FF5722;
+    color: #fff;
+}
 
- }
+.filter-dropdown ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    list-style: none;
+    padding: 0 !important;
+    /* Removed extra padding */
+    margin: 0 !important;
+    /* Reset margin */
+    display: none;
+    z-index: 1000;
 
- .filter-dropdown ul li {
-     margin:0 !important;
-     padding: 0 !important;
- }
+}
 
- .filter-dropdown ul li button {
-     background: none;
-     border: none;
-     color: #FF5722;
-     cursor: pointer;
-     font-size: 1.2rem;
-     padding: 0rem 0.5rem; /* Reduce padding inside buttons */
-     text-align: left;
-     display: block; /* Ensure buttons take full width of the li */
+.filter-dropdown ul li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
 
- }
+.filter-dropdown ul li button {
+    background: none;
+    border: none;
+    color: #FF5722;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0rem 0.5rem;
+    /* Reduce padding inside buttons */
+    text-align: left;
+    display: block;
+    /* Ensure buttons take full width of the li */
 
- .filter-dropdown ul li button:hover {
-     text-decoration: underline;
- }
+}
 
- /* Grid Layout */
- .grid-container {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-     gap: 0px;
-     padding: 0px;
-     margin: 0;
-     max-width: 100%;
-     width: 100%;
- }
+.filter-dropdown ul li button:hover {
+    text-decoration: underline;
+}
 
- .grid-item {
-     position: relative;
-     /* Make the container relative for positioning overlay */
-     background-color: #fff;
-     border-radius: 0px;
-     overflow: hidden;
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     padding: 0;
-     margin: 0.5rem;
-     min-height: 400px;
- }
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 0px;
+    padding: 0px;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+}
 
- .grid-item:hover {
-     transform: translateY(-10px);
-     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
- }
+.grid-item {
+    position: relative;
+    /* Make the container relative for positioning overlay */
+    background-color: #fff;
+    border-radius: 0px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0.5rem;
+    min-height: 400px;
+}
 
- /* Overlay */
- .overlay {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0, 0, 0, 0.7);
-     /* Transparent color */
-     opacity: 0;
-     transition: opacity 0.3s ease;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
-     z-index: 1;
- }
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
 
- .grid-item:hover .overlay {
-     opacity: 1;
- }
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Transparent color */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
 
- /* Text inside overlay */
- .text {
-     color: #fff;
-     padding: 1rem;
-     visibility: visible;
-     /* Ensure visibility */
-     z-index: 2;
- }
+.grid-item:hover .overlay {
+    opacity: 1;
+}
 
- .text h3,
- .text .filter-tag,
- .text .description {
-     margin: 0.5rem 0;
- }
+/* Text inside overlay */
+.text {
+    color: #fff;
+    padding: 1rem;
+    visibility: visible;
+    /* Ensure visibility */
+    z-index: 2;
+}
 
- .text h3 {
-     display: block;
-     /* Ensure the title is displayed */
- }
+.text h3,
+.text .filter-tag,
+.text .description {
+    margin: 0.5rem 0;
+}
 
- .text .filter-tag {
-     font-style: italic;
-     font-size: 1rem;
-     color: #FFEB3B;
-     /* Example tag color */
- }
+.text h3 {
+    display: block;
+    /* Ensure the title is displayed */
+}
 
- .text .description {
-     font-size: 0.9rem;
- }
+.text .filter-tag {
+    font-style: italic;
+    font-size: 1rem;
+    color: #FFEB3B;
+    /* Example tag color */
+}
 
- .clickable-grid {
-     cursor: pointer;
-     background-color: rgba(255, 255, 255, 0);
-     /* Transparent color */
-     width: 100%;
-     height: 100%;
-     position: absolute;
-     top: 0;
-     left: 0;
-     z-index: 3;
-     /* Ensure clickable-grid is below text and overlay */
-     cursor: pointer;
- }
+.text .description {
+    font-size: 0.9rem;
+}
 
- .text .more-button {
-     background-color: #FF5722;
-     color: #fff;
-     border: none;
-     padding: 0.5rem 1rem;
-     cursor: pointer;
-     border-radius: 4px;
-     margin-top: 0.5rem;
- }
+.clickable-grid {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    /* Transparent color */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    /* Ensure clickable-grid is below text and overlay */
+    cursor: pointer;
+}
 
- .text .more-button:hover {
-     background-color: #FF3D00;
- }
+.text .more-button {
+    background-color: #FF5722;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
 
- /* Hide the more button on desktop */
- @media (min-width: 1024px) {
-     .text .more-button {
-         display: none;
-     }
+.text .more-button:hover {
+    background-color: #FF3D00;
+}
 
-
- }
-
- /* Remove existing styles */
- .grid-item img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     border: none;
-     /* Remove border */
- }
+/* Hide the more button on desktop */
+@media (min-width: 1024px) {
+    .text .more-button {
+        display: none;
+    }
 
 
+}
+
+/* Remove existing styles */
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    /* Remove border */
+}
 
 
- /* Example for specific grid items */
- .grid-item.large {
-     grid-column: span 2;
-     /* This will make the item span across 2 columns */
- }
 
- .grid-item.tall {
-     grid-row: span 2;
-     /* This will make the item span across 2 rows */
- }
 
- .grid-item.large-tall {
-     grid-column: span 2;
-     /* This will make the item span across 2 columns */
-     grid-row: span 2;
-     /* This will make the item span across 2 rows */
- }
+/* Example for specific grid items */
+.grid-item.large {
+    grid-column: span 2;
+    /* This will make the item span across 2 columns */
+}
 
- /* Show Dropdown on Hover */
- .filter-dropdown:hover ul {
-     display: block;
- }
+.grid-item.tall {
+    grid-row: span 2;
+    /* This will make the item span across 2 rows */
+}
 
- /* Responsive Adjustments */
- @media (max-width: 1024px) {
+.grid-item.large-tall {
+    grid-column: span 2;
+    /* This will make the item span across 2 columns */
+    grid-row: span 2;
+    /* This will make the item span across 2 rows */
+}
 
-     /* Tablet and phone screens */
-     nav {
-         flex-direction: column;
-         /* Stack the logo and menu vertically */
-         align-items: center;
-         /* Center the items */
-         padding: 1.5rem;
-         /* Adjust padding */
-     }
+/* Show Dropdown on Hover */
+.filter-dropdown:hover ul {
+    display: block;
+}
 
-     .logo {
-         margin-bottom: 1rem;
-         font-size: 1.8rem;
-         /* Slightly larger logo */
-     }
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
 
-     nav ul {
-         flex-direction: row;
-         /* Align menu items in a row */
-         justify-content: center;
-         /* Center the menu items */
-         width: 100%;
-         /* Ensure the menu spans the full width */
-         margin-top: 1rem;
-         /* Space between logo and menu */
-     }
+    /* Tablet and phone screens */
+    nav {
+        flex-direction: column;
+        /* Stack the logo and menu vertically */
+        align-items: center;
+        /* Center the items */
+        padding: 1.5rem;
+        /* Adjust padding */
+    }
 
-     nav ul li a{
+    .logo {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        /* Slightly larger logo */
+    }
+
+    nav ul {
+        flex-direction: row;
+        /* Align menu items in a row */
+        justify-content: center;
+        /* Center the menu items */
+        width: 100%;
+        /* Ensure the menu spans the full width */
+        margin-top: 1rem;
+        /* Space between logo and menu */
+    }
+
+    nav ul li a {
         font-size: 1.2rem;
-         margin-left: 0rem;
-         margin-bottom: 0.5rem;
-         /* Add space between items */
-     }
+        margin-left: 0rem;
+        margin-bottom: 0.5rem;
+        /* Add space between items */
+    }
 
-     .filter-dropdown {
-         margin-left: 0;
-         /* change left margin for filter button */
+    .filter-dropdown {
+        margin-left: 0;
+        /* change left margin for filter button */
 
-     }
+    }
 
-     .filter-dropdown button{
+    .filter-dropdown button {
         font-size: 1.2rem;
         background-color: var(--secondary-color);
 
-     }
+    }
 
-     .filter-dropdown ul {
+    .filter-dropdown ul {
         left: -50px;
         width: fit-content;
     }
 
-     /*grid layout*/
-     .grid-item.large {
-         grid-column: span 1;
-         /* This will make the item span across 2 columns */
-     }
+    /*grid layout*/
+    .grid-item.large {
+        grid-column: span 1;
+        /* This will make the item span across 2 columns */
+    }
 
-     .grid-item.tall {
-         grid-row: span 1;
-         /* This will make the item span across 2 rows */
-     }
+    .grid-item.tall {
+        grid-row: span 1;
+        /* This will make the item span across 2 rows */
+    }
 
-     .grid-item.large-tall {
-         grid-column: span 1;
-         /* This will make the item span across 2 columns */
-         grid-row: span 1;
-         /* This will make the item span across 2 rows */
-     }
+    .grid-item.large-tall {
+        grid-column: span 1;
+        /* This will make the item span across 2 columns */
+        grid-row: span 1;
+        /* This will make the item span across 2 rows */
+    }
 
-     .clickable-grid {
-         display: none;
-     }
- }
+    .clickable-grid {
+        display: none;
+    }
+}
 
- /* Scroll Progress Bar */
- #progress-container {
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 5px;
-     background: rgb(255, 123, 0);
-     z-index: 9999;
- }
+/* Scroll Progress Bar */
+#progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgb(255, 123, 0);
+    z-index: 9999;
+}
 
- #progress-bar {
-     height: 100%;
-     width: 0;
-     background: #e6ff04;
- }
+#progress-bar {
+    height: 100%;
+    width: 0;
+    background: #e6ff04;
+}
 
- /* Parallax Sections */
- .parallax {
-     height: 500px;
-     /* Adjust height as needed */
-     background-attachment: fixed;
-     background-size: cover;
-     background-position: center;
- }
+/* Parallax Sections */
+.parallax {
+    height: 500px;
+    /* Adjust height as needed */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
 
- .parallax-1 {
-     background-image: url('https://via.placeholder.com/1920x1080');
- }
+.parallax-1 {
+    background-image: url('https://via.placeholder.com/1920x1080');
+}
 
- .parallax-2 {
-     background-image: url('https://via.placeholder.com/1920x1080');
- }
+.parallax-2 {
+    background-image: url('https://via.placeholder.com/1920x1080');
+}
 
- .content {
-     padding: 2rem;
-     text-align: center;
- }
+.content {
+    padding: 2rem;
+    text-align: center;
+}
 
 
 
- /*TESTING Sticky side*/
- /*https://medium.com/@clairecodes/making-a-sticky-sidebar-with-two-lines-of-css-280169eac624*/
+/*TESTING Sticky side*/
+/*https://medium.com/@clairecodes/making-a-sticky-sidebar-with-two-lines-of-css-280169eac624*/
 
- /* Default styles for desktop and larger screens */
+/* Default styles for desktop and larger screens */
 .wrapper {
     display: flex;
     justify-content: space-between;
 }
 
-.wrapper img{
+.wrapper img {
     margin-left: 0;
     margin-right: 0;
     max-width: 100%;
@@ -497,9 +519,12 @@
     color: var(--accent-color);
     padding: 15px;
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    flex-direction: column; /* Aligns children vertically */
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+    flex-direction: column;
+    /* Aligns children vertically */
 
 }
 
@@ -508,19 +533,20 @@
     font-family: var(--font-bold);
     padding: 30px;
 }
-.sidebar .body{
+
+.sidebar .body {
     color: var(--accent-color);
     font-family: var(--font-primary);
-    padding-top: 30px !important; 
+    padding-top: 30px !important;
     width: 70%;
 }
 
-.sidebar .tags{
+.sidebar .tags {
     color: var(--secondary-color) !important;
     font-family: var(--font-bold);
 }
 
-.sidebar .year{
+.sidebar .year {
     color: var(--secondary-color);
     font-family: var(--font-primary);
 }
@@ -544,14 +570,18 @@
 
 /* Gallery Styles for Desktop and Larger Screens */
 .main .gallery {
-    display: grid; /* Added: Use grid layout for gallery */
-    grid-template-columns: repeat(3, 1fr); /* Added: 3 images per row on large screens */
-    gap: 20px; /* Added: Space between images */
+    display: grid;
+    /* Added: Use grid layout for gallery */
+    grid-template-columns: repeat(3, 1fr);
+    /* Added: 3 images per row on large screens */
+    gap: 20px;
+    /* Added: Space between images */
     width: 100%;
 }
 
 .main .gallery img {
-    width: 100%; /* Added: Ensure images take full width of their container */
+    width: 100%;
+    /* Added: Ensure images take full width of their container */
     height: auto;
 }
 
@@ -559,38 +589,47 @@
 /* Styles for tablet and phone view (max-width: 768px) */
 @media (max-width: 768px) {
     .wrapper {
-        flex-direction: column; /* Change layout to column */
+        flex-direction: column;
+        /* Change layout to column */
     }
 
     .sidebar {
-        position: static; /* Remove sticky positioning */
-        width: 100%; /* Full width */
-        height: auto; /* Adjust height to fit content */
+        position: static;
+        /* Remove sticky positioning */
+        width: 100%;
+        /* Full width */
+        height: auto;
+        /* Adjust height to fit content */
     }
 
     .main {
-        width: 100%; /* Full width */
-        height: auto; /* Adjust height to fit content */
+        width: 100%;
+        /* Full width */
+        height: auto;
+        /* Adjust height to fit content */
     }
-     /* Gallery Styles for Mobile */
-     .main .gallery {
-        grid-template-columns: 1fr; /* Added: 1 image per row on mobile */
-        gap: 15px; /* Added: Space between images */
+
+    /* Gallery Styles for Mobile */
+    .main .gallery {
+        grid-template-columns: 1fr;
+        /* Added: 1 image per row on mobile */
+        gap: 15px;
+        /* Added: Space between images */
     }
 }
 
 
- /*DELETE LATER*/
- #header,
- #footer {
-     width: 100%;
-     height: 200px;
-     background-color: #eee;
-     text-align: center;
- }
+/*DELETE LATER*/
+#header,
+#footer {
+    width: 100%;
+    height: 200px;
+    background-color: #eee;
+    text-align: center;
+}
 
 
- /* Preloader styles */
+/* Preloader styles */
 #preloader {
     position: fixed;
     top: 0;
@@ -619,6 +658,7 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -629,14 +669,19 @@
 /* Scroll-to-top button */
 .scroll-to-top {
     position: fixed;
-    bottom: 20px; /* Distance from the bottom of the page */
-    right: 20px; /* Distance from the right side of the page */
+    bottom: 20px;
+    /* Distance from the bottom of the page */
+    right: 20px;
+    /* Distance from the right side of the page */
     font-size: 30px;
-    background-color: var(--secondary-color); /* Your accent color */
+    background-color: var(--secondary-color);
+    /* Your accent color */
     color: var(--tertiary-color);
     border-radius: 50%;
-    width: 50px; /* Size of the button */
-    height: 50px; /* Size of the button */
+    width: 50px;
+    /* Size of the button */
+    height: 50px;
+    /* Size of the button */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -644,7 +689,8 @@
     box-shadow: 0 5px 3px rgba(28, 5, 176, 0.7);
     opacity: 0.8;
     transition: opacity 0.3s ease;
-    z-index: 1000; /* Make sure it appears above all other elements */
+    z-index: 1000;
+    /* Make sure it appears above all other elements */
 
 }
 
