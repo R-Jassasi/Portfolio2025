@@ -18,10 +18,10 @@
 
 /* Define colors and fonts */
 :root {
-    --primary-color: #6e44ff;
-    --secondary-color: #ff8600;
-    --tertiary-color: #030854;
-    --accent-color: #ffd8e6;
+    --primary-color: #100D28;
+    --secondary-color: #FECEE9;
+    --tertiary-color: #9381FF;
+    --accent-color: #ff8600;
 
     --font-primary: 'Berlin Sans FB', sans-serif;
     --font-bold: 'Berlin Sans FB Bold', sans-serif;
@@ -30,7 +30,7 @@
 /* Apply the styles */
 body {
     font-family: var(--font-primary);
-    background-color: var(--tertiary-color);
+    background-color: var(--primary-color);
     color: var(--primary-color);
 }
 
@@ -40,22 +40,23 @@ h1 {
 }
 
 button {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
     width: 6rem;
     height: 3rem;
-    color: var(--tertiary-color);
+    color: var(--primary-color);
     font-family: var(--font-bold);
     font-size: x-large;
     margin: 5px;
 }
 
 button:hover {
-    background-color: var(--primary-color);
-    color: var(--accent-color);
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
 }
 
 button:active {
-    background-color: #3d20a5;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
 }
 
 
@@ -99,7 +100,7 @@ a {
 }
 
 footer {
-    background-color: #e6ff04;
+    background-color: var(--tertiary-color);
     height: 10vh;
     text-align: center;
     padding: 16px;
@@ -228,7 +229,7 @@ nav ul li a:hover {
 .grid-item {
     position: relative;
     /* Make the container relative for positioning overlay */
-    background-color: #fff;
+    background-color: var(--secondary-color);
     border-radius: 0px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -269,7 +270,8 @@ nav ul li a:hover {
 
 /* Text inside overlay */
 .text {
-    color: #fff;
+    font-family: var(--font-primary);
+    color: var(--secondary-color);
     padding: 1rem;
     visibility: visible;
     /* Ensure visibility */
@@ -284,18 +286,20 @@ nav ul li a:hover {
 
 .text h3 {
     display: block;
+    font-size: 2rem;
+
     /* Ensure the title is displayed */
 }
 
 .text .filter-tag {
     font-style: italic;
-    font-size: 1rem;
-    color: #FFEB3B;
+    font-size: 1.5rem;
+    color:var(--accent-color);
     /* Example tag color */
 }
 
 .text .description {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .clickable-grid {
@@ -312,7 +316,7 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-.text .more-button {
+/* .text .more-button {
     background-color: #FF5722;
     color: #fff;
     border: none;
@@ -324,7 +328,7 @@ nav ul li a:hover {
 
 .text .more-button:hover {
     background-color: #FF3D00;
-}
+} */
 
 /* Hide the more button on desktop */
 @media (min-width: 1024px) {
@@ -442,9 +446,9 @@ nav ul li a:hover {
         /* This will make the item span across 2 rows */
     }
 
-    .clickable-grid {
+    /* .clickable-grid {
         display: none;
-    }
+    } */
 }
 
 /* Scroll Progress Bar */
@@ -454,14 +458,14 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 5px;
-    background: rgb(255, 123, 0);
+    background: var(--secondary-color);
     z-index: 9999;
 }
 
 #progress-bar {
     height: 100%;
     width: 0;
-    background: #e6ff04;
+    background: var(--accent-color);
 }
 
 /* Parallax Sections */
@@ -507,7 +511,7 @@ nav ul li a:hover {
 }
 
 .sidebar {
-    background-color: var(--tertiary-color);
+    background-color: var(--primary-color);
     width: 30%;
     height: 100vh;
     min-height: 200px;
@@ -529,20 +533,20 @@ nav ul li a:hover {
 }
 
 .sidebar .title {
-    color: var(--accent-color) !important;
+    color: var(--secondary-color) !important;
     font-family: var(--font-bold);
     padding: 30px;
 }
 
 .sidebar .body {
-    color: var(--accent-color);
+    color: var(--secondary-color);
     font-family: var(--font-primary);
     padding-top: 30px !important;
     width: 70%;
 }
 
 .sidebar .tags {
-    color: var(--secondary-color) !important;
+    color: var(--accent-color) !important;
     font-family: var(--font-bold);
 }
 
@@ -624,7 +628,7 @@ nav ul li a:hover {
 #footer {
     width: 100%;
     height: 200px;
-    background-color: #eee;
+    background-color: var(--primary-color);
     text-align: center;
 }
 
