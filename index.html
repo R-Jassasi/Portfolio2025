@@ -44,8 +44,23 @@
             </ul>
         </nav>
 
+        <!-- Spline Code Snippet-->
+        <canvas id="canvas3d"></canvas>
 
-
+        <script type="module">
+            import { Application } from 'https://cdn.jsdelivr.net/npm/@splinetool/runtime@latest';
+    
+            const canvas = document.getElementById('canvas3d');
+    
+            const app = new Application(canvas);
+            app.load('https://prod.spline.design/vk2761S0-Y1DHsjB/scene.splinecode')
+                .then(() => {
+                    console.log("Spline scene loaded successfully.");
+                })
+                .catch((err) => {
+                    console.error("Error loading Spline scene:", err);
+                });
+        </script>
 
         <!-- Grid Layout -->
         <div class="grid-container">
@@ -61,8 +76,8 @@
                 </div>
             </div>
 
-            <div class="grid-item" data-category="design" data-aos="flip-up" data-aos-delay="100">
-            <div class="clickable-grid" onclick="location.href='academeal.html'"></div>
+            <div class="grid-item" data-category="design" data-aos="fade-up" data-aos-delay="100">
+                <div class="clickable-grid" onclick="location.href='academeal.html'"></div>
                 <img src="./Assets/images/academeal/Academeal-Logo-crop.png" alt="Large Design Project">
                 <div class="overlay">
                     <div class="text">
@@ -75,27 +90,27 @@
 
             <div class="grid-item" data-category="design" data-aos="fade-up" data-aos-delay="100">
                 <div class="clickable-grid" onclick="location.href='oho.html'"></div>
-                    <img src="./Assets/images/oho/oho-poster.jpg" alt="Large Design Project">
-                    <div class="overlay">
-                        <div class="text">
-                            <h3>OHO</h3>
-                            <p class="filter-tag">Design</p>
-                            <p class="description">This is a description of the large design project.</p>
-                        </div>
+                <img src="./Assets/images/oho/oho-poster.jpg" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>OHO</h3>
+                        <p class="filter-tag">Design</p>
+                        <p class="description">This is a description of the large design project.</p>
                     </div>
                 </div>
+            </div>
 
-                <div class="grid-item" data-category="animation" data-aos="fade-up" data-aos-delay="100">
-                    <div class="clickable-grid" onclick="location.href='nutrients.html'"></div>
-                        <img src="./Assets/images/nutrients/cover-cropped.jpg" alt="Large Design Project">
-                        <div class="overlay">
-                            <div class="text">
-                                <h3>Nutrients VS Mental Health</h3>
-                                <p class="filter-tag">Animation</p>
-                                <p class="description">This is a description of the large design project.</p>
-                            </div>
-                        </div>
+            <div class="grid-item" data-category="animation" data-aos="fade-up" data-aos-delay="100">
+                <div class="clickable-grid" onclick="location.href='nutrients.html'"></div>
+                <img src="./Assets/images/nutrients/cover-cropped.jpg" alt="Large Design Project">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Nutrients VS Mental Health</h3>
+                        <p class="filter-tag">Animation</p>
+                        <p class="description">This is a description of the large design project.</p>
                     </div>
+                </div>
+            </div>
 
             <div class="grid-item tall" data-category="development" data-aos="fade-up">
                 <img src="https://via.placeholder.com/400x600" alt="Large Design Project">

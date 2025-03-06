@@ -708,3 +708,9 @@ nav ul li a:hover {
 html {
     scroll-behavior: smooth;
 }
+canvas {
+    width: 600px !important;  /* Force width */
+    height: 600px !important; /* Force height */
+    display: block;
+    border: 2px solid black; /* Optional border for visibility */
+}
