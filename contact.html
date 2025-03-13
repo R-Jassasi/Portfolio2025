@@ -48,14 +48,32 @@
         <!-- Contact Section -->
         <div id="contact">
             <h2 style="text-align: center;">Got something to say? I'm all ears :) <br> Drop me a message!</h2>
+
             <form id="form">
-                <div id="warning-message" style="margin-bottom: 16px; color: rgb(255, 83, 83);"></div>
-                <input id="name" type="text" placeholder="Enter Name" required>
-                <input id="email" type="email" placeholder="Enter Email" required>
-                <textarea id="message" placeholder="Enter Message" required></textarea>
-                <button id="submit" type="button" onclick="sendMail()">Submit</button>
+
+                <div class="input-container">
+                    <div class="styled-input wide">
+                        <input id="name" type="text" required>
+                        <label for="name">Enter Name</label>
+                    </div>
+
+                    <div class="styled-input wide">
+                        <input id="email" type="email" required>
+                        <label for="email">Enter Email</label>
+                    </div>
+
+                    <div class="styled-input wide">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Enter Message</label>
+                    </div>
+
+                    <button id="submit" class="submit-btn" type="button" onclick="sendMail()">Submit</button>
+                    <div id="warning-message" style="margin-bottom: 16px; color: rgb(255, 83, 83); text-align: center;"></div>
+
+                </div>
             </form>
         </div>
+
 
         <footer>
             <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50"
