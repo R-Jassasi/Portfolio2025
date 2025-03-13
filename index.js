@@ -35,13 +35,13 @@ function filterGrid(category) {
 }
 
 // Show the dropdown when clicking the button
-document.querySelector('.filter-dropdown button').addEventListener('click', function() {
+document.querySelector('.filter-dropdown button').addEventListener('click', function () {
     const dropdown = document.querySelector('.filter-dropdown ul');
     dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
 });
 
 // Close dropdown if user clicks outside of it (optional)
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     const dropdown = document.querySelector('.filter-dropdown ul');
     const button = document.querySelector('.filter-dropdown button');
     if (!button.contains(event.target) && !dropdown.contains(event.target)) {
@@ -82,23 +82,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //scroll top arrow
-    // Get the scroll-to-top button
-    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+// Get the scroll-to-top button
+const scrollToTopBtn = document.querySelector('.scroll-to-top');
 
-    // Function to check scroll position and toggle button visibility
-    function toggleScrollToTopButton() {
-        if (window.scrollY > 200) { // If scrolled down 200px or more
-            scrollToTopBtn.style.display = 'flex'; // Show the button
-        } else {
-            scrollToTopBtn.style.display = 'none'; // Hide the button
-        }
+// Function to check scroll position and toggle button visibility
+function toggleScrollToTopButton() {
+    if (window.scrollY > 200) { // If scrolled down 200px or more
+        scrollToTopBtn.style.display = 'flex'; // Show the button
+    } else {
+        scrollToTopBtn.style.display = 'none'; // Hide the button
+    }
+}
+
+// Check on page load
+toggleScrollToTopButton();
+
+// Check on scroll
+window.addEventListener('scroll', toggleScrollToTopButton);
+
+
+//emailjs form 
+function sendMail() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    var warningMessage = document.getElementById("warning-message");
+
+    if (!name || !email || !message) {
+        warningMessage.textContent = "Please fill out all fields.";
+        return;
     }
 
-    // Check on page load
-    toggleScrollToTopButton();
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        warningMessage.textContent = "Please enter a valid email address.";
+        return;
+    }
 
-    // Check on scroll
-    window.addEventListener('scroll', toggleScrollToTopButton);
+    var serviceID = "service_exrh0vu";
+    var templateID = "template_rpfnkec";
 
-
-    
+    emailjs.send(serviceID, templateID, { name, email, message })
+        .then(() => {
+            document.getElementById("form").reset();
+            alert("Your message sent successfully!");
+            warningMessage.textContent = "";
+        })
+        .catch(err => console.log(err));
+}
