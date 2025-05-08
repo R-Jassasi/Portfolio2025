@@ -129,4 +129,4 @@ function sendMail() {
             warningMessage.textContent = "";
         })
         .catch(err => console.log(err));
-}
+} 
