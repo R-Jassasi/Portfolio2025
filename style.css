@@ -92,6 +92,14 @@ img {
     padding: 3px;
 }
 
+.dark-font{
+    color: var(--primary-color);
+}
+
+.accent-font{
+    color: var(--accent-color);
+}
+
 h2 {
     color: var(--secondary-color);
 }
@@ -588,6 +596,16 @@ nav ul li a:hover {
     width: 100%;
 }
 
+.main .gallery2 {
+    display: grid;
+    /* Added: Use grid layout for gallery */
+    grid-template-columns: repeat(2, 1fr);
+    /* Added: 3 images per row on large screens */
+    gap: 20px;
+    /* Added: Space between images */
+    width: 100%;
+}
+
 .main .gallery img {
     width: 100%;
     /* Added: Ensure images take full width of their container */
@@ -620,6 +638,13 @@ nav ul li a:hover {
 
     /* Gallery Styles for Mobile */
     .main .gallery {
+        grid-template-columns: 1fr;
+        /* Added: 1 image per row on mobile */
+        gap: 15px;
+        /* Added: Space between images */
+    }
+
+    .main .gallery2 {
         grid-template-columns: 1fr;
         /* Added: 1 image per row on mobile */
         gap: 15px;
