@@ -242,7 +242,7 @@ nav ul li a:hover {
 .grid-item {
     position: relative;
     /* Make the container relative for positioning overlay */
-    background-color: var(--secondary-color);
+    background-color: var(--tertiary-color);
     border-radius: 0px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
