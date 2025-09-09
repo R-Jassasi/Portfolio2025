@@ -124,9 +124,9 @@ nav {
     justify-content: space-between;
     /* Aligns logo to the left and menu to the right on desktop */
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: #100d28c8;
     color: var(--secondary-color);
-    padding: 1rem 2rem;
+    padding: 1rem 150px 1rem 150px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -232,9 +232,9 @@ nav ul li a:hover {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 0px;
-    padding: 0px;
-    margin: 0;
+    gap: 50px;
+    padding: 50px 150px 50px 150px;
+    margin: 0px;
     max-width: 100%;
     width: 100%;
 }
