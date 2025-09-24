@@ -42,6 +42,7 @@ body {
 h1 {
     font-family: var(--font-bold);
     color: var(--secondary-color);
+    font-size: 5rem;
 }
 
 button {
@@ -107,6 +108,7 @@ img {
 
 h2 {
     color: var(--accent-color);
+    font-size: xx-large;
 }
 
 p,
@@ -574,25 +576,26 @@ nav ul li a:hover {
 }
 
 figure {
-  position: relative;
-  margin: 0;
-  overflow: hidden;
-  display: inline-block;   /* makes figure match the image height */
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    display: inline-block;
+    /* makes figure match the image height */
 }
 
 
 figcaption {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 6px 10px;
-  font-size: 1rem;
-  border-radius: 4px;
-  width: auto;
-  max-width: 90%;
-  box-sizing: border-box;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 6px 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    width: auto;
+    max-width: 90%;
+    box-sizing: border-box;
 }
 
 
@@ -641,32 +644,34 @@ figcaption {
 
 
 .main .gallery2 figure {
-  position: relative;
-  margin: 0;
-  overflow: hidden;
-  display: inline-block;   /* makes figure match the image height */
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    display: inline-block;
+    /* makes figure match the image height */
 }
 
 .main .gallery2 img {
-  display: block;
-  width: 100%;   /* scale correctly inside grid */
-  height: auto;
+    display: block;
+    width: 100%;
+    /* scale correctly inside grid */
+    height: auto;
 }
 
 .main .gallery2 figcaption {
-  position: absolute;
-  top: 10px !important;  
-  left: 10px;
-  bottom: auto;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 6px 10px;
-  font-size: 1rem;
-  border-radius: 4px;
-  width: auto !important;
-  height: auto !important;
-  max-width: 90%;
-  box-sizing: border-box;
+    position: absolute;
+    top: 10px !important;
+    left: 10px;
+    bottom: auto;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 6px 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    width: auto !important;
+    height: auto !important;
+    max-width: 90%;
+    box-sizing: border-box;
 }
 
 
@@ -830,14 +835,15 @@ label {
     font-size: 1.2rem;
 }
 
+
+
 input:focus~label,
 textarea:focus~label,
-input:valid~label,
-textarea:valid~label {
+input:not(:placeholder-shown)~label,
+textarea:not(:placeholder-shown)~label {
     font-size: 0.9em;
-    color: var(--tertiary-color);
-    top: -5px;
-    -webkit-transition: all 0.225s ease;
+    color: var(--accent-color);
+    top: -10px;
     transition: all 0.225s ease;
 }
 
@@ -882,6 +888,7 @@ textarea {
     border-color: var(--secondary-color);
     width: 100%;
     font-size: 1.2rem;
+    font-family: var(--font-primary);
     color: var(--primary-color);
     border-radius: 4px;
 }
@@ -908,6 +915,11 @@ textarea:focus~span {
 textarea {
     width: 100%;
     min-height: 15em;
+}
+
+#warning-message {
+    font-size: x-large;
+    color: #fa4e65 !important;
 }
 
 .input-container {
@@ -943,6 +955,6 @@ input[type=checkbox]+label {
 }
 
 input[type=checkbox]:checked+label {
-    color: #f00;
+    color: rgb(235, 150, 150);
     font-style: normal;
 }

@@ -8,7 +8,19 @@
     <title>Portfolio</title>
     <!-- AOS Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./index.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "nTb2BgELxuw0P8xEv",
+            });
+        })();
+    </script>
 
 </head>
 
@@ -34,29 +46,32 @@
 
         <!-- Contact Section -->
         <div id="contact">
-            <h2 style="text-align: center;">Got something to say? I'm all ears :) <br> Drop me a message!</h2>
+            <br>
+            
+            <h1 style="text-align: center;">Talk to Me!👋</h1> 
+                <h2>I’d Love to Hear From You :)</h2>
 
             <form id="form">
 
                 <div class="input-container">
                     <div class="styled-input wide">
-                        <input id="name" type="text" required>
-                        <label for="name">Enter Name</label>
+                        <input id="name" type="text" placeholder="" required>
+                        <label for="name">Your Name</label>
                     </div>
 
                     <div class="styled-input wide">
-                        <input id="email" type="email" required>
-                        <label for="email">Enter Email</label>
+                        <input id="email" type="email" placeholder="" required>
+                        <label for="email">Your Email</label>
                     </div>
 
                     <div class="styled-input wide">
-                        <textarea id="message" required></textarea>
-                        <label for="message">Enter Message</label>
+                        <textarea id="message" placeholder="" required></textarea>
+                        <label for="message">Your Message</label>
                     </div>
+                    <div id="warning-message" style="margin-bottom: 16px; text-align: center;"></div>
 
-                    <button id="submit" class="submit-btn" type="button" onclick="sendMail()">Submit</button>
+                    <button id="submit" class="submit-btn" type="button" onclick="sendMail()">SEND</button>
                     <div style="height: 10px;"></div>
-                    <div id="warning-message" style="margin-bottom: 16px; color: rgb(255, 83, 83); text-align: center;"></div>
 
                 </div>
             </form>
