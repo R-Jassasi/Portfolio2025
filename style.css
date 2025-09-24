@@ -237,7 +237,7 @@ nav ul li a:hover {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 50px;
+    gap: 20px;
     padding: 50px 150px 50px 150px;
     margin: 0px;
     max-width: 100%;
