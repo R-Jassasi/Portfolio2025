@@ -108,7 +108,7 @@ img {
 
 h2 {
     color: var(--accent-color);
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 p,
@@ -626,7 +626,7 @@ figcaption {
     width: 100%;
 }
 
-.main .gallery2 {
+.gallery2 {
     display: grid;
     /* Added: Use grid layout for gallery */
     grid-template-columns: repeat(2, 1fr);
@@ -643,7 +643,7 @@ figcaption {
 }
 
 
-.main .gallery2 figure {
+.gallery2 figure {
     position: relative;
     margin: 0;
     overflow: hidden;
@@ -651,14 +651,14 @@ figcaption {
     /* makes figure match the image height */
 }
 
-.main .gallery2 img {
+.gallery2 img {
     display: block;
     width: 100%;
     /* scale correctly inside grid */
     height: auto;
 }
 
-.main .gallery2 figcaption {
+.gallery2 figcaption {
     position: absolute;
     top: 10px !important;
     left: 10px;
@@ -958,3 +958,70 @@ input[type=checkbox]:checked+label {
     color: rgb(235, 150, 150);
     font-style: normal;
 }
+
+.about {
+  max-width: 1000px;       /* contain in center */
+  margin: 0 auto;          /* center horizontally */
+  padding: 60px 20px;      /* white space top/sides */
+  text-align: center;
+}
+
+.about h1 {
+  margin-bottom: 40px;
+  color: var(--secondary-color); /* optional theme color */
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* image + text split */
+  gap: 40px;                      /* space between */
+  align-items: center;             /* vertical centering */
+  text-align: left;                /* align text naturally */
+}
+
+.about-content img {
+  width: 100%;
+  max-width: 400px; /* keep logo balanced */
+  margin: 0 auto;   /* center inside its grid cell */
+  display: block;
+}
+
+.about-content h2 {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+  
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-content h2 {
+    margin-top: 20px;
+  }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 3px solid #ff4d6d; /* cursor */
+  max-width: 0; /* start hidden */
+  animation: typing 8s steps(100, end) forwards, blink 0.75s step-end infinite;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  white-space: normal; /* allow wrapping */
+}
+
+/* typing animation */
+@keyframes typing {
+  from { max-width: 0 }
+  to { max-width: 100% }
+}
+
+/* cursor blink */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #ff4d6d }}
