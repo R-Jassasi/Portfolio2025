@@ -42,7 +42,7 @@ body {
 h1 {
     font-family: var(--font-bold);
     color: var(--secondary-color);
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 button {
@@ -961,11 +961,8 @@ input[type=checkbox]:checked+label {
 
 .about {
     max-width: 1400px;
-    /* contain in center */
     margin: 0 auto;
-    /* center horizontally */
-    padding: 60px 20px;
-    /* white space top/sides */
+    padding: 60px 20px 0px;
     text-align: center;
     justify-content: center;
 }
@@ -973,27 +970,20 @@ input[type=checkbox]:checked+label {
 .about h1 {
     margin-bottom: 40px;
     color: var(--secondary-color);
-    /* optional theme color */
 }
 
 .about-content {
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
-    /* image + text split */
     gap: 30px;
-    /* space between */
     align-items: center;
-    /* vertical centering */
     text-align: left;
-    /* align text naturally */
 }
 
 .about-content img {
     width: 100%;
     max-width: 600px;
-    /* keep logo balanced */
     margin: 0 auto;
-    /* center inside its grid cell */
     display: block;
     padding: 0px;
     border-radius: 20px;
@@ -1003,7 +993,7 @@ input[type=checkbox]:checked+label {
     font-size: 1.3rem;
     line-height: 1.6;
     font-weight: 400;
-    padding: 30px 200px;
+    padding: 30px 200px 0px 200px;
   
 }
 
@@ -1074,5 +1064,105 @@ input[type=checkbox]:checked+label {
   }
   95% {
     top: -150px;
+  }
+}
+
+
+
+.cv-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.cv-main, .cv-details {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.cv-sidebar {
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.cv-sidebar h2 {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.cv-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cv-sidebar li {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.cv-main h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.cv-main h2,
+.cv-details h2 {
+  font-size: 1.4em;
+  margin-top: 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.cv-details h3 {
+  margin-top: 15px;
+  font-size: 1.1em;
+}
+
+.cv-main ul,
+.cv-details ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Responsive layout for phones */
+@media screen and (max-width: 768px) {
+  .cv-grid-container {
+    display: block;
+    padding: 10px;
+  }
+
+  .cv-sidebar,
+  .cv-main,
+  .cv-details {
+    margin-bottom: 20px;
+    border-radius: 0;
+  }
+
+  .cv-main h1 {
+    font-size: 1.5em;
+  }
+
+  .cv-main h2,
+  .cv-details h2 {
+    font-size: 1.2em;
+  }
+
+  .cv-details h3 {
+    font-size: 1em;
   }
 }
