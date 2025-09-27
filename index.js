@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
 function filterGrid(category) {
     const items = document.querySelectorAll('.grid-item');
     items.forEach(item => {
-        if (category === 'all' || item.getAttribute('data-category') === category) {
+        const categories = item.getAttribute('data-category').split(' ');
+        if (category === 'all' || categories.includes(category)) {
             item.style.display = 'block';
         } else {
             item.style.display = 'none';
