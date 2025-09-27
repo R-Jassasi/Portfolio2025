@@ -134,7 +134,7 @@ nav {
     align-items: center;
     background-color: #100d28c8;
     color: var(--secondary-color);
-    padding: 1rem 150px 1rem 150px;
+    padding: .5rem 150px .5rem 150px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -146,6 +146,7 @@ nav {
     font-weight: bold;
     margin-bottom: 1rem;
     width: 100%;
+    padding-top: 20px;
 }
 
 nav ul {
@@ -1271,4 +1272,45 @@ a:hover {
     }
 
 
+}
+
+
+blockquote {
+    font-family: var(--font-bold);
+	font-weight: 100;
+	font-size: 2rem;
+	max-width: 600px;
+	line-height: 1.4;
+	position: relative;
+	margin: 0;
+	padding: .5rem;
+}
+
+blockquote:before,
+blockquote:after {
+	position: absolute;
+	color: var(--secondary-color);
+	font-size: 8rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+blockquote:before {
+	content: '“';
+	left: -5rem;
+	top: -2rem;
+}
+
+blockquote:after {
+	content: '”';
+	right: -5rem;
+	bottom: 1rem;
+}
+
+cite {
+    font-family: var(--font-primary);
+    color: var(--accent-color);
+    font-size: large;
+	line-height: 3;
+	text-align: left;
 }
